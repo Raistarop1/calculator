@@ -1,0 +1,257 @@
+using System;       //library1
+using System.Collections.Generic;       //library3
+using System.ComponentModel;        //library4
+using System.Data;      //library5
+using System.Drawing;       //library6
+using System.Text;      //library7
+using System.Windows.Forms;     //library8
+
+namespace Calculator        //main program
+{
+    public partial class Form1 : Form       //using oop creating class called form 
+    {
+        double FirstNumber;     //assigning variable name and data type to store first number (data members)
+        string Operation;       //assigning variable name and data type to store the operator choosen (data members)
+        public Form1()      //Constructor
+        {
+            InitializeComponent();      //Initializes the program upon start
+        }
+
+        private void n1_Click(object sender, EventArgs e)       //creating public function for button1
+        {
+            if (textBox1.Text == "0" && textBox1.Text != null)      //using if-else control structure
+            {
+                textBox1.Text = "1";        //If textbox is empty,it will show 1
+            }
+            else
+            {
+                textBox1.Text = textBox1.Text + "1";        //If textbox has existing digits it will write the existing digits and 1 in end
+            }
+        }
+
+        private void n2_Click(object sender, EventArgs e)       //creating public function for button2
+        {
+            if (textBox1.Text == "0" && textBox1.Text != null)      //using if-else control structure
+            {
+                textBox1.Text = "2";        //If textbox is empty,it will show 2
+            }
+            else
+            {
+                textBox1.Text = textBox1.Text + "2";        //If textbox has existing digits it will write the existing digits and 2 in end
+            }
+        }
+
+       
+    }
+    private void n3_Click(object sender, EventArgs e)       //creating public function for button3
+    {
+            if (textBox1.Text == "0" && textBox1.Text != null)      //using if-else control structure
+        {
+                textBox1.Text = "3";        //If textbox is empty,it will show 3
+        }
+            else
+            {
+                textBox1.Text = textBox1.Text + "3";        //If textbox has existing digits it will write the existing digits and 3 in end
+        }
+        }
+
+        private void n4_Click(object sender, EventArgs e)       //creating public function for button4
+    {
+            if (textBox1.Text == "0" && textBox1.Text != null)      //using if-else control structure
+        {
+                textBox1.Text = "4";        //If textbox is empty,it will show 4
+        }
+            else
+            {
+                textBox1.Text = textBox1.Text + "4";        //If textbox has existing digits it will write the existing digits and 4 in end
+        }
+        }
+
+        private void n5_Click(object sender, EventArgs e)       //creating public function for button5
+    {
+            if (textBox1.Text == "0" && textBox1.Text != null)      //using if-else control structure
+        {
+                textBox1.Text = "5";        //If textbox is empty,it will show 5
+        }
+            else
+            {
+                textBox1.Text = textBox1.Text + "5";        //If textbox has existing digits it will write the existing digits and 5 in end
+        }
+        }
+
+        private void n6_Click(object sender, EventArgs e)       //creating public function for button6
+    {
+            if (textBox1.Text == "0" && textBox1.Text != null)      //using if-else control structure
+        {
+                textBox1.Text = "6";        //If textbox is empty,it will show 6
+        }
+            else
+            {
+                textBox1.Text = textBox1.Text + "6";        //If textbox has existing digits it will write the existing digits and 6 in end
+        }
+        }
+
+        private void n7_Click(object sender, EventArgs e)       //creating public function for button7
+    {
+            if (textBox1.Text == "0" && textBox1.Text != null)      //using if-else control structure
+        {
+                textBox1.Text = "7";        //If textbox is empty,it will show 7
+        }
+            else
+            {
+                textBox1.Text = textBox1.Text + "7";        //If textbox has existing digits it will write the existing digits and 7 in end
+        }
+        }
+
+        private void n8_Click(object sender, EventArgs e)       //creating public function for button8
+    {
+            if (textBox1.Text == "0" && textBox1.Text != null)      //using if-else control structure
+        {
+                textBox1.Text = "8";        //If textbox is empty,it will show 8
+        }
+            else
+            {
+                textBox1.Text = textBox1.Text + "8";        //If textbox has existing digits it will write the existing digits and 8 in end
+        }
+        }
+    private void n8_MouseHover(object sender, EventArgs e)
+    {
+        n8.BackColor = Color.White;
+    }
+
+    private void n8_MouseLeave(object sender, EventArgs e)
+    {
+        n8.BackColor = Color.LightSlateGray;
+    }
+    private void n9_Click(object sender, EventArgs e)       //creating public function for button9
+    {
+            if (textBox1.Text == "0" && textBox1.Text != null)      //using if-else control structure
+        {
+                textBox1.Text = "9";        //If textbox is empty,it will show 9
+        }
+            else
+            {
+                textBox1.Text = textBox1.Text + "9";        //If textbox has existing digits it will write the existing digits and 9 in end
+            }
+        }
+        private void n9_MouseHover(object sender, EventArgs e)
+        {
+            n9.BackColor = Color.White;
+        }
+
+        private void n9_MouseLeave(object sender, EventArgs e)
+        {
+            n9.BackColor = Color.LightSlateGray;
+        }
+        private void n0_Click(object sender, EventArgs e)       //creating public function for button0
+    {
+            if (textBox1.Text == "0" && textBox1.Text != null)      //using if-else control structure
+        {
+                textBox1.Text = "0";        //If textbox is empty,it will show 0
+        }
+            else
+            {
+                textBox1.Text = textBox1.Text + "0";        //If textbox has existing digits it will write the existing digits and 0 in end
+        }
+        }
+        private void badd_Click(object sender, EventArgs e)       //creating public function for operator "+"
+    {
+            FirstNumber = Convert.ToDouble(textBox1.Text);      //Saves the digits on the textbox as first number
+            textBox1.Text = "0";        //removes contents from the textbox so second number can be read
+            Operation = "+";        //The "+" operator gets stored in the variable "operator"
+        }
+
+        private void bsub_Click(object sender, EventArgs e)       //creating public function for operator "-"
+    {
+            FirstNumber = Convert.ToDouble(textBox1.Text);      //Saves the digits on the textbox as first number
+        textBox1.Text = "0";        //removes contents from the textbox so second number can be read
+        Operation = "-";        //The "-" operator gets stored in the variable "operator"
+    }
+
+        private void bmul_Click(object sender, EventArgs e)       //creating public function for operator "*"
+    {
+            FirstNumber = Convert.ToDouble(textBox1.Text);      //Saves the digits on the textbox as first number
+        textBox1.Text = "0";        //removes contents from the textbox so second number can be read
+        Operation = "*";        //The "*" operator gets stored in the variable "operator"
+    }
+
+        private void bdiv_Click(object sender, EventArgs e)       //creating public function for operator "/"
+    {
+            FirstNumber = Convert.ToDouble(textBox1.Text);      //Saves the digits on the textbox as first number
+        textBox1.Text = "0";        //removes contents from the textbox so second number can be read
+        Operation = "/";        //The "/" operator gets stored in the variable "operator"
+    }
+
+        private void bmod_Click(object sender, EventArgs e)       //creating public function for operator "%"
+    {
+            FirstNumber = Convert.ToDouble(textBox1.Text);      //Saves the digits on the textbox as first number
+        textBox1.Text = "0";        //removes contents from the textbox so second number can be read
+        Operation = "%";        //The "%" operator gets stored in the variable "operator"
+    }
+
+        private void nclear_Click(object sender, EventArgs e)       //Creating private function for button clear
+        {
+            textBox1.Text = "0";        //When clicked the textbox will be cleared
+        }
+        private void nd_Click(object sender, EventArgs e)       //Creating private function for decimal point
+        {
+            textBox1.Text = textBox1.Text + ".";        //When clicked,it will add deciaml point to textbox
+        }
+
+        private void bequal_Click(object sender, EventArgs e)       //
+        {
+            double SecondNumber;
+            double Result;
+
+            SecondNumber = Convert.ToDouble(textBox1.Text);
+
+            if (Operation == "+")
+            {
+                Result = (FirstNumber + SecondNumber);
+                textBox1.Text = Convert.ToString(Result);
+                FirstNumber = Result;
+            }
+            if (Operation == "-")
+            {
+                Result = (FirstNumber - SecondNumber);
+                textBox1.Text = Convert.ToString(Result);
+                FirstNumber = Result;
+            }
+            if (Operation == "*")
+            {
+                Result = (FirstNumber * SecondNumber);
+                textBox1.Text = Convert.ToString(Result);
+                FirstNumber = Result;
+            }
+            if (Operation == "/")
+            {
+                if (SecondNumber == 0)
+                {
+                    textBox1.Text = "ERROR";
+
+                }
+                else
+                {
+                    Result = (FirstNumber / SecondNumber);
+                    textBox1.Text = Convert.ToString(Result);
+                    FirstNumber = Result;
+                }
+            }
+            if (Operation == "%")
+            {
+                if (SecondNumber == 0)
+                {
+                    textBox1.Text = "ERROR";
+
+                }
+                else
+                {
+                    Result = (FirstNumber % SecondNumber);
+                    textBox1.Text = Convert.ToString(Result);
+                    FirstNumber = Result;
+                }
+            }
+        }
+
+    }
+}
